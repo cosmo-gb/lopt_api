@@ -31,5 +31,6 @@ def production_plan():
     return jsonify(res_save)
 
 if __name__ == '__main__':
-    app.run()
+    #app.run()
     #app.run(host="0.0.0.0",port=8888)
+    app.run(port=8888)
