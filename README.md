@@ -14,7 +14,11 @@ git clone https://github.com/cosmo-gb/lopt_api.git
 
 ## Use this code
 
-The code is in the repo src/. It is made of 3 scripts: api_post.py, find_solution.py and test_api.py.
+The code is in the repo src/. It is made of 4 scripts:
+- api_post.py
+- test_api.py
+- find_solution.py 
+- my_minimization.py
 
 ### Build the API
 
@@ -34,8 +38,16 @@ you can change this by changing f=1 line 35.
 The url obtained when you run api_post.py needs to be set to the url in test_api.py (line 37)
 By running test_api.py, you automatically save the results in a response_to_payload***.json file
 
-### Compute the power
+### Compute the power and optimize the cost
 
-Finally the script find_solution computes the optimal power of each source
+The script find_solution.py computes the optimal power of each source
+
+### optimization
+
+The script my_minimization.py optimizes the cost with a gradient descent method.
+It is used by default in the script api_post.py.
+If you want to use the minimize method of scipy instead, you can set use_scipy=True in api_post.py
+
+
 
 
