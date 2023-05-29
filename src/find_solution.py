@@ -49,6 +49,9 @@ def save_res(res, names):
            {'optimal cost': np.round(res.fun,1)}]
     return p_dic, log
 
+
+
+
 if __name__ == '__main__' :
     # load data
     path = '../example_payloads/'
