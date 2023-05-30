@@ -20,6 +20,8 @@ The code is in the repo src/. It is made of 4 scripts:
 - find_solution.py 
 - my_minimization.py
 
+The answers are in the folder responses/
+
 ### Build the API
 
 With api_post.py, you can build the REST API exposing an endpoint /productionplan that accepts a POST
@@ -38,7 +40,8 @@ Then with test_api.py, you can post your data (payload) and obtain a result (res
 You can run this script as previously. By default, it runs for the payload1 file, 
 you can change this by changing f=1 line 36.
 The url obtained when you run api_post.py needs to be set to the url in test_api.py (line 41)
-By running test_api.py, you automatically save the results in a response_to_payload***.json file
+By running test_api.py, you automatically save the results 
+in a response_to_payload***.json file inside the folder responses/
 
 ### Compute the power and optimize the cost
 
