@@ -40,6 +40,6 @@ def production_plan():
 
 if __name__ == '__main__':
     use_scipy=False
-    app.run()
+    #app.run()
     #app.run(host="0.0.0.0",port=8888)
-    #app.run(port=8888)
+    app.run(port=8888)

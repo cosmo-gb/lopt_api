@@ -37,7 +37,7 @@ if __name__ == '__main__':
     # request POST to the API
     # this url can be changed if it is also changed in the code api_post
     #url = 'http://192.168.79.240:8888'
-    url = 'http://127.0.0.1:5000'
-    #url = 'http://127.0.0.1:8888'  
+    #url = 'http://127.0.0.1:5000'
+    url = 'http://127.0.0.1:8888'  
     path_name_json = path + name + str(f) + '.json'
     send_data(path_name_json, url)

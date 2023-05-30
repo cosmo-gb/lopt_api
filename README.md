@@ -28,14 +28,16 @@ or from the terminal inside src/ do
 ```
 python api_post.py
 ```
-This activates the API.
+This activates the API. The choice of the port by default is port=8888. This can be changed (see line 45).
+If this port is already occupied (e.g. if you have a notebook running), this won't work.
+You should remove what is running at this port before using it.
 
 ### Test the API
 
 Then with test_api.py, you can post your data (payload) and obtain a result (response). 
 You can run this script as previously. By default, it runs for the payload1 file, 
-you can change this by changing f=1 line 35.
-The url obtained when you run api_post.py needs to be set to the url in test_api.py (line 37)
+you can change this by changing f=1 line 36.
+The url obtained when you run api_post.py needs to be set to the url in test_api.py (line 41)
 By running test_api.py, you automatically save the results in a response_to_payload***.json file
 
 ### Compute the power and optimize the cost
