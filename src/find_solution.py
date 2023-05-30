@@ -39,15 +39,23 @@ def get_data(data):
     load = data['load']
     return load, fuels, powerplants
 
-def save_res(res, names):
-    p_eff = res.x
-    N_plants = len(p_eff)
-    p_dic = []
-    for i in range(N_plants):
-        p_dic += [{'name': names[i], 'p': np.round(p_eff[i],1)}]
-    log = [{'status': res.message}, 
-           {'optimal cost': np.round(res.fun,1)}]
-    return p_dic, log
+def save_res(res, names, use_scipy=False):
+    if use_scipy :
+        p_eff = res.x
+        N_plants = len(p_eff)
+        p_dic = []
+        for i in range(N_plants):
+            p_dic += [{'name': names[i], 'p': np.round(p_eff[i],1)}]
+        log = [{'status': res.message}, 
+               {'optimal cost': np.round(res.fun,1)}]
+        return p_dic, log
+    else :
+        p_eff = res
+        N_plants = len(p_eff)
+        p_dic = []
+        for i in range(N_plants):
+            p_dic += [{'name': names[i], 'p': np.round(p_eff[i],1)}]
+        return p_dic
 
 
 

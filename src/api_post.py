@@ -28,11 +28,13 @@ def production_plan():
                        x0=np.zeros((len(powerplants))), 
                        bounds=bounds, 
                        constraints={'type': 'eq', 'fun': lambda x: np.sum(x) - load})
+        # save solution
+        res_save, log = save_res(res, names,use_scipy)
     # minimization with simple gradient descent
     else :    
         res = minimize_with_constraints(cost_m, bounds, load)
-    # save solution
-    res_save, log = save_res(res, names)
+        # save solution
+        res_save = save_res(res, names,use_scipy)
 
     return jsonify(res_save)
 
